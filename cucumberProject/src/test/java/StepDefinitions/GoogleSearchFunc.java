@@ -13,11 +13,15 @@ public class GoogleSearchFunc {
 	@Given("browser is open")
 	public void browser_is_open() {
 		// System.out.println("inside step-browser is opene");
-
-		System.setProperty("webdriver.chrome.driver", "./Servers/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		
+		
+		  System.setProperty("webdriver.chrome.driver", "./Servers/chromedriver.exe");
+		  driver = new ChromeDriver(); driver.manage().timeouts().implicitlyWait(10,
+		  TimeUnit.SECONDS); driver.manage().timeouts().pageLoadTimeout(5,
+		  TimeUnit.SECONDS);
+		 
+		 
+		 
 	}
 
 	@And("user is on google search page")
@@ -49,9 +53,9 @@ public class GoogleSearchFunc {
 		System.out.println("inside step -user is navigated to search results");
 		
 		driver.getPageSource().contains("Online courses");
-		driver.close();
-		driver.quit();
-		
+		/*
+		 * driver.close(); driver.quit();
+		 */
 	}
 
 }
