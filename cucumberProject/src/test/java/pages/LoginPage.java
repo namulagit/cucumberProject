@@ -14,12 +14,14 @@ public class LoginPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		
+		if(!driver.getTitle().equals("TestProject Demo"))
+		{
+			
+			throw new IllegalStateException("ths is not login page the current page is "+driver.getCurrentUrl());
+		}
+		
 	}
 	
-	/*
-	 * By username=By.id("name"); By password=By.id("password"); By
-	 * btn_login=By.id("login");
-	 */
 	
 	@FindBy(id="name")
 	public WebElement  username;
@@ -29,6 +31,9 @@ public class LoginPage {
 	
 	@FindBy(id="login")
 	public WebElement  btn_login;
+	
+	@FindBy(xpath="//div[@id='pageProfile']//h1[contains(text(),'TestProject Example page')]")
+	public WebElement  pageHeader;
 	
 	
 }

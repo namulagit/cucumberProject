@@ -1,6 +1,7 @@
 package modules;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import pages.LoginPage;
 
@@ -36,6 +37,7 @@ public class LoginModule extends LoginPage  {
 		userName(uname);
 		password(password);
 		btn();
+		Assert.assertTrue(pageHeader.getText().equals("TestProject Example page")); 
 		
 	}
 }

@@ -38,7 +38,7 @@ WebDriver driver=null;
 
 	@Then("user is navigated to the home page")
 	public void user_is_navigated_to_the_home_page() throws InterruptedException {
-	  Assert.assertEquals(driver.findElement(By.xpath("//div[@id='pageProfile']//h1[contains(text(),'TestProject Example page')]")).getText(), "TestProject Example page");
+	  
 	Thread.sleep(4000);
 	driver.close();
 	}

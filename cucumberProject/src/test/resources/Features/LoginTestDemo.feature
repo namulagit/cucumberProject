@@ -10,5 +10,4 @@ Feature: test login page
       | username | password |
       | test1    |    12345 |
       | test2    |    12345 |
-      | test3    |    12345 |
-      | test4    |    12345 |
+     
